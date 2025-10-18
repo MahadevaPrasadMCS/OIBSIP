@@ -79,6 +79,7 @@ public class CancellationFrame extends JFrame {
 
         // --- Fetch button action ---
         fetchButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             String pnr = pnrTextField.getText();
             if(!validatePNR(pnr)) {
                 JOptionPane.showMessageDialog(this, "Please enter a valid PNR.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -102,6 +103,7 @@ public class CancellationFrame extends JFrame {
 
         // --- Cancel button action ---
         cancelButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to cancel?", "Confirm Cancellation", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
                     String pnr = pnrTextField.getText();
@@ -128,6 +130,7 @@ public class CancellationFrame extends JFrame {
         });
         // --- Back button action ---
         backButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             this.dispose();
             WelcomeFrame frame3 = new WelcomeFrame(user);
             frame3.setVisible(true);

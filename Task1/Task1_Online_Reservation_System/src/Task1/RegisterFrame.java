@@ -55,12 +55,14 @@ public class RegisterFrame extends JFrame{
         //=============Action Listners=================
     
             backButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             this.dispose();
             LoginFrame frame1 = new LoginFrame();
             frame1.setVisible(true); 
         });
 
           submitButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             int userId;
             String username = userName.getText();
             char[] pass = password.getPassword();

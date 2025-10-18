@@ -50,12 +50,14 @@ public class LoginFrame extends JFrame{
         //==============Action Listeners================
 
         registerButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             this.dispose();
             RegisterFrame frame2 = new RegisterFrame();
             frame2.setVisible(true);
         });
 
          loginButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             String user = userName.getText();
             char[] pass = password.getPassword();
 

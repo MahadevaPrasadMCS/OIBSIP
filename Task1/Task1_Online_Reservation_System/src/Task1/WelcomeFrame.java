@@ -42,18 +42,21 @@ public class WelcomeFrame extends JFrame{
         //=============Action Listners=================
 
         reservationButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             this.dispose();
             ReservationFrame frame4 = new ReservationFrame(user);
             frame4.setVisible(true);
         });
 
         cancellationButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             this.dispose();
             CancellationFrame frame5 = new CancellationFrame(user);
             frame5.setVisible(true);
         });
 
         logoutButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to logout?", "Logout Confirmation", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
             this.dispose();

@@ -137,20 +137,24 @@ public class ReservationFrame extends JFrame {
 
         // Fetch trains dynamically
         fetchButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             fetchTrains();
         });
 
         // Fetch train timings
         fetchTime.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             fetchTimings();
         });
 
         // Book ticket
         bookNow.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             bookTrain(user);
         });
         
         backButton.addActionListener((ActionEvent e) -> {
+            System.out.println(e.getSource());
             dispose();
             WelcomeFrame frame3 = new WelcomeFrame(user);
             frame3.setVisible(true);
